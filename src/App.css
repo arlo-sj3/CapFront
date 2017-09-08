@@ -1,0 +1,41 @@
+Button {
+  color: red; }
+
+body {
+  background-color: black; }
+
+.Background h1 {
+  font-size: 50px;
+  text-align: center;
+  color: yellow; }
+
+.tupper-ware {
+  bottom: 0;
+  position: fixed;
+  width: 100%; }
+
+.modal-container {
+  position: relative; }
+
+Button {
+  width: 100%; }
+
+#cool {
+  height: 300px;
+  width: 300px;
+  background: red; }
+
+.mapcontainer {
+  margin: 0 auto;
+  position: relative;
+  width: 75%;
+  height: 600px;
+  background-color: grey; }
+
+.topbar {
+  position: absolute;
+  top: 0%;
+  right: 0%; }
+
+.welcome {
+  color: yellow; }
