@@ -29,6 +29,10 @@ export class Mapcontainer extends Component {
       let truck = trucks[i]
       console.log(json);
       Geocoder.geocode(truck.location, (err, data) =>{
+        if(err){
+          console.error(err);
+          return;
+        }
 console.log(this.props);
         // if (this.props.currentBusiness){
         //
