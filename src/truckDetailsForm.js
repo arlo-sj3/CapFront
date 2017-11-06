@@ -80,7 +80,7 @@ class Truckdetailsform extends Component {
 
         <Modal show={this.state.showModal} onHide={this.close}>
           <Modal.Header >
-            <Modal.Title>something like truck #__</Modal.Title>
+            <Modal.Title>TRUCK #</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <form>
