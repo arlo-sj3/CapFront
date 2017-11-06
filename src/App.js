@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
 import Newownerform from './newOwnerForm.js';
-
 import Existingownerform from './existingOwnerForm.js';
 import Truckdetailsform from './truckDetailsForm.js'
 import Background from './background.js';
@@ -32,14 +31,12 @@ class App extends Component {
   async getOwners() {
     const response = await fetch('https://foodtraxserver.herokuapp.com/owner')
     const json = await response.json()
-    // this.setState({trucks : json})
     this.setState({owner: json})
   }
 
   async getBusinesses() {
     const response = await fetch('https://foodtraxserver.herokuapp.com/business')
     const json = await response.json()
-    // this.setState({trucks : json})
     this.setState({business: json})
   }
 
@@ -47,7 +44,6 @@ class App extends Component {
     const response = await fetch('https://foodtraxserver.herokuapp.com/trucks')
     const json = await response.json()
     console.log('trucks res', json);
-    // this.setState({trucks : json})
     this.setState({trucks: json})
   }
 
@@ -95,9 +91,7 @@ class App extends Component {
       console.log('parsing failed', ex)
     })
     const json = await response.json()
-
     let freshOwner = [json];
-
     for (var i = 0; i < freshOwner[0].length; i++) {
 
       if(freshOwner[0][i].email === owner.email && freshOwner[0][i].pass === owner.pass){
@@ -105,7 +99,6 @@ class App extends Component {
     }
   }
 }
-
 
   addBusiness = async (business) => {
     delete business.showModal;
@@ -144,7 +137,6 @@ class App extends Component {
     console.log(this.state.currentBusiness)
     delete truck.showModal;
     truck.business_id = this.state.currentBusiness.business_id
-    // truck.name = this.state.currentBusiness.name;
     const response = await fetch('https://foodtraxserver.herokuapp.com/trucks', {
       method: 'POST',
       body: JSON.stringify(truck),

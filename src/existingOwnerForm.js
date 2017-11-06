@@ -3,8 +3,6 @@ import './App.css';
 import { Button, Modal } from 'react-bootstrap';
 // import Modal from 'react-bootstrap-modal'
 
-
-
 class Existingownerform extends Component {
   constructor(props) {
     super(props)
@@ -15,7 +13,6 @@ class Existingownerform extends Component {
 
     }
   }
-
 
   newPass = () => {
     this.setState({password: this.refs.pass.value})
@@ -37,19 +34,7 @@ class Existingownerform extends Component {
      this.setState({ showModal: true });
    }
 
-
-
   render() {
-    // const popover = (
-    //   <Popover id="modal-popover" title="popover">
-    //     very popover. such engagement
-    //   </Popover>
-    // );
-    // const tooltip = (
-    //   <Tooltip id="modal-tooltip">
-    //     wow.
-    //   </Tooltip>
-    // );
 
     return (
       <div>
@@ -89,5 +74,3 @@ class Existingownerform extends Component {
 }
 
 export default Existingownerform
-
-// ReactDOM.render(<Newownermodal />, document.getElementById('newownermodal'))

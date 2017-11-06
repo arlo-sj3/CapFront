@@ -13,8 +13,6 @@ class Logout extends Component {
       <div className="topbar">
         <Button onClick={this.props.logout}
           bsStyle="danger"
-
-
         >
           LOGOUT
         </Button>

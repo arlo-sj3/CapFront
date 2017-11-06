@@ -34,22 +34,11 @@ class Newbusinessform extends Component {
 
   open = () => {
     this.setState({showModal: true});
-    //  console.log(this.state.showModal)
   }
 
 
 
   render() {
-    // const popover = (
-    //   <Popover id="modal-popover" title="popover">
-    //     very popover. such engagement
-    //   </Popover>
-    // );
-    // const tooltip = (
-    //   <Tooltip id="modal-tooltip">
-    //     wow.
-    //   </Tooltip>
-    // );
 
     return (
       <div>

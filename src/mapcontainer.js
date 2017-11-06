@@ -34,12 +34,6 @@ export class Mapcontainer extends Component {
           return;
         }
 console.log(this.props);
-        // if (this.props.currentBusiness){
-        //
-        //  data.results[0].geometry.location['name'] =  this.props.currentBusiness.name}
-        //  else {
-        //    data.results[0].geometry.location['name'] =  defName
-        //  }
 
         data.results[0].geometry.location['name'] = truck.name
         data.results[0].geometry.location['venue'] = truck.event_venue
