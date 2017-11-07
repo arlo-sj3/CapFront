@@ -7,6 +7,7 @@ import Background from './background.js';
 import Mapcontainer from './mapcontainer.js';
 import Logout from './logout.js';
 import Newbusinessform from './newBusinessForm.js';
+import Trucklist from './truckList.js'
 // import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 
 class App extends Component {
@@ -24,7 +25,8 @@ class App extends Component {
       showAdd: true,
       showLog: false,
       showMap: true,
-      showNextForm:false
+      showNextForm:false,
+      showList: false
     }
   }
 
@@ -95,7 +97,7 @@ class App extends Component {
     for (var i = 0; i < freshOwner[0].length; i++) {
 
       if(freshOwner[0][i].email === owner.email && freshOwner[0][i].pass === owner.pass){
-      this.setState({currentUser: freshOwner[0][i], showAdd:false, showLog:true, showMap:false, showNextForm: true})
+      this.setState({currentUser: freshOwner[0][i], showAdd:false, showLog:true, showMap:false, showNextForm: true, showList:true})
     }
   }
 }
@@ -172,7 +174,7 @@ class App extends Component {
 
 
 logout = () => {
-  this.setState({currentUser:'', showAdd: true, showLog: false, showMap:true, showNextForm: false, currentBusiness:''})
+  this.setState({currentUser:'', showAdd: true, showLog: false, showMap:true, showNextForm: false, currentBusiness:'', showList: false})
 }
 
   render() {
@@ -196,6 +198,8 @@ logout = () => {
         {this.state.showMap? <div className="mapcontainer">
           <Mapcontainer currentBusiness={this.state.currentBusiness}/>
         </div>:null }
+
+        {this.state.showList? <div className="trucklist"> <Trucklist /> </div>:null}
 
         {this.state.showAdd?<div
           className="tupper-ware">
