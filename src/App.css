@@ -32,10 +32,21 @@ Button {
   height: 600px;
   background-color: grey; }
 
+.trucklist {
+  margin: 0 auto;
+  position: relative;
+  width: 75%;
+  height: 600px;
+  background-color: grey; }
+
 .topbar {
   position: absolute;
   top: 0%;
   right: 0%; }
 
 .welcome {
+  color: yellow; }
+
+.manage {
+  text-align: center;
   color: yellow; }

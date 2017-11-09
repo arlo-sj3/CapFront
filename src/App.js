@@ -193,13 +193,15 @@ logout = () => {
 
         {this.state.currentBusiness?<Truckdetailsform addTruck = {this.addTruck}/>:null}
 
-        {this.state.showNextForm? <Newbusinessform  addBusiness={this.addBusiness} />:null}
+
 
         {this.state.showMap? <div className="mapcontainer">
           <Mapcontainer currentBusiness={this.state.currentBusiness}/>
         </div>:null }
 
-        {this.state.showList? <div className="trucklist"> <Trucklist /> </div>:null}
+        {this.state.showList? <div className="trucklist"> <Trucklist currentBusiness={this.state.currentBusiness} /> </div>:null}
+
+        {this.state.showNextForm? <Newbusinessform  addBusiness={this.addBusiness} />:null}
 
         {this.state.showAdd?<div
           className="tupper-ware">
