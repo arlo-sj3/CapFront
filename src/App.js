@@ -64,6 +64,7 @@ class App extends Component {
       console.log('parsing failed', ex)
     })
     if(response.ok === false){
+      console.log(response)
       return alert('bad email')
     }
     const json = await response.json()
