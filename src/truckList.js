@@ -5,7 +5,8 @@ class Trucklist extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      currentUser:''
+      currentUser:'',
+      trucks: []
     }
   }
 
@@ -28,7 +29,7 @@ class Trucklist extends Component {
     return (
       <div>
         <h1 className="manage" >
-          Manage your trucks
+          Manage your trucks:{this.props.currentUser.owner_id}
         </h1>
       </div>
     )

@@ -200,7 +200,9 @@ logout = () => {
         </div>:null }
 
         {this.state.showList? <div className="trucklist" > <Trucklist
-          currentUser={this.state.currentUser}  />{this.state.trucks[0]}</div>:null}
+          currentUser={this.state.currentUser}
+          trucks={this.state.trucks}
+           />{this.state.trucks[0]}</div>:null}
 
         {this.state.showNextForm? <Newbusinessform  addBusiness={this.addBusiness} />:null}
 
