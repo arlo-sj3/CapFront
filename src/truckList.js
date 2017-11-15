@@ -26,8 +26,8 @@ class Trucklist extends Component {
   render() {
     return (
       <div>
-        <h1 className="manage">
-          Manage your trucks
+        <h1 className="manage" >
+          Manage your trucks 
         </h1>
       </div>
     )
