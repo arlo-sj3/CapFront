@@ -4,7 +4,9 @@ import './App.css';
 class Trucklist extends Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      currentBusiness:''
+    }
   }
 
   async componentDidMount() {
