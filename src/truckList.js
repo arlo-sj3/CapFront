@@ -5,7 +5,7 @@ class Trucklist extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      currentBusiness:''
+      currentUser:''
     }
   }
 
@@ -24,10 +24,11 @@ class Trucklist extends Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <div>
         <h1 className="manage" >
-          Manage your trucks 
+          Manage your trucks
         </h1>
       </div>
     )

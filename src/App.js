@@ -171,11 +171,6 @@ class App extends Component {
   }
 
 
-truckz = () => {
-  this.setState({
-    currentBusiness:this.state.currentBusiness
-  })
-}
 
 
 logout = () => {
@@ -204,7 +199,8 @@ logout = () => {
           <Mapcontainer currentBusiness={this.state.currentBusiness}/>
         </div>:null }
 
-        {this.state.showList? <div className="trucklist" > <Trucklist truckz={this.truckz} />{this.state.trucks[0]}</div>:null}
+        {this.state.showList? <div className="trucklist" > <Trucklist
+          currentUser={this.state.currentUser}  />{this.state.trucks[0]}</div>:null}
 
         {this.state.showNextForm? <Newbusinessform  addBusiness={this.addBusiness} />:null}
 
