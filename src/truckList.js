@@ -6,7 +6,8 @@ class Trucklist extends Component {
     super(props)
     this.state = {
       currentUser:'',
-      trucks: []
+      trucks: [],
+      businesses: []
     }
   }
 
