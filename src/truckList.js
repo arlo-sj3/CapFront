@@ -20,7 +20,6 @@ class Trucklist extends Component {
     for (var i = 0; i < trucks.length; i++) {
       let truck = trucks[i]
       console.log(json);
-      console.log(this.state)
       console.log(this.props);
     }
   }
