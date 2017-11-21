@@ -6,30 +6,32 @@ class Trucklist extends Component {
     super(props)
     this.state = {
       currentUser:'',
-      trucks: [],
+      trucks: '',
       businesses: []
     }
   }
 
-  async componentDidMount() {
-    const response = await fetch('https://foodtraxserver.herokuapp.com/trucks')
-    const json = await response.json()
-    var result = [];
-    var trucks = json;
-    let promises = [];
-    for (var i = 0; i < trucks.length; i++) {
-      let truck = trucks[i]
-      console.log(json);
-      console.log(this.props);
-    }
-  }
+  // async componentDidMount() {
+  //   const response = await fetch('https://foodtraxserver.herokuapp.com/trucks')
+  //   const json = await response.json()
+  //   var result = [];
+  //   var trucks = json;
+  //   let promises = [];
+  //   for (var i = 0; i < trucks.length; i++) {
+  //     let truck = trucks[i]
+  //     console.log(json);
+  //     console.log(this.props);
+  //   }
+  //   this.setState({trucks: json})
+  //   console.log(this.state.trucks[0]['location']);
+  // }
 
   render() {
     console.log(this.props);
     return (
       <div>
         <h1 className="manage" >
-          Manage your trucks:{this.props.currentUser.owner_id}
+          Manage your trucks:
         </h1>
       </div>
     )
