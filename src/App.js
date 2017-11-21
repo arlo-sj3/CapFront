@@ -42,11 +42,27 @@ class App extends Component {
     this.setState({business: json})
   }
 
-  async getTrucks() {
+  // async getTrucks() {
+  //   const response = await fetch('https://foodtraxserver.herokuapp.com/trucks')
+  //   const json = await response.json()
+  //   console.log('trucks res', json);
+  //   this.setState({trucks: json})
+  //   console.log(this.state.trucks );
+  // }
+
+  async componentDidMount() {
     const response = await fetch('https://foodtraxserver.herokuapp.com/trucks')
     const json = await response.json()
-    console.log('trucks res', json);
+    var result = [];
+    var trucks = json;
+    let promises = [];
+    for (var i = 0; i < trucks.length; i++) {
+      let truck = trucks[i]
+      console.log(json);
+      console.log(this.props);
+    }
     this.setState({trucks: json})
+    console.log(this.state.trucks);
   }
 
   addOwner = async(owner) => {
@@ -178,6 +194,8 @@ logout = () => {
 }
 
   render() {
+
+    console.log(this.state.trucks)
     return (
       <div className="App">
 
@@ -200,8 +218,9 @@ logout = () => {
         </div>:null }
 
         {this.state.showList? <div className="trucklist" > <Trucklist
-          currentUser={this.state.currentUser}
           trucks={this.state.trucks}
+          currentUser={this.state.currentUser}
+
            /></div>:null}
 
         {this.state.showNextForm?  <Newbusinessform  addBusiness={this.addBusiness} />:null}
